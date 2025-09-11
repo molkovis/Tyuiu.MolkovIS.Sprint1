@@ -1,59 +1,40 @@
-﻿using Tyuiu.MolkovIS.Sprint1.Task0.V8.Lib;
+﻿using Tyuiu.MolkovIS.Sprint1.Task1.V12.Lib;
+
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-
-
         Console.Title = "Спринт #1 | Выполнил: Мольков И. С.| ПКТб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт#01                                                               *");
-        Console.WriteLine("* Тема: Базовые навыки работы в C#                                        *");
-        Console.WriteLine("* Задание #0                                                              *");
-        Console.WriteLine("* Вариант #8                                                              *");
+        Console.WriteLine("* Тема: Организация ввода\\вывода в консольных приложениях                *");
+        Console.WriteLine("* Задание #1                                                              *");
+        Console.WriteLine("* Вариант #12                                                             *");
         Console.WriteLine("* Выполнил: Мольков Иван Сергеевич                                        *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Условие:                                                                *");
-        Console.WriteLine("* Написать консольную программу C#, которая вычисляет выражение           *");
-        Console.WriteLine("* 15/2/4                                                                  *");
+        Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
+        Console.WriteLine("* вычисляет результат по формуле (x+y)/6 и печатает его на экране.        *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         ");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("* 15/2/4                                                                   *");
-        Console.WriteLine("***************************************************************************");
 
+        double x, y;
 
-
-
-
-
-
+        Console.WriteLine("Введите значение x: ");
+        x = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Введите значение y: ");
+        y = Convert.ToDouble(Console.ReadLine());
+        DataService ds = new DataService();
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-
-
-        DataService ds = new DataService();
-
-
-        int i = 1;
-
-        int j = i++;
-
-        int k = ++j;
-
-        Console.WriteLine("i=" + i + "\\");
-
-        Console.WriteLine("j=" + j);
-
-        Console.WriteLine("k=" + k);
-
-
-
-        Console.WriteLine(ds.Calculate());
+        double res = ds.Calculate(x, y);
+        Console.WriteLine(res);
         Console.ReadKey();
+        
     }
 }
