@@ -7,7 +7,7 @@ namespace Tyuiu.MolkovIS.Sprint1.Task2.V16.Lib
     {
         public double CalculatePerimetrCircle(int value)
         {
-            return Math.Round(2d *  value * 3.14d, 3);
+            return Math.Round(2d *  value * Math.PI, 3);
         }
     }
 }
