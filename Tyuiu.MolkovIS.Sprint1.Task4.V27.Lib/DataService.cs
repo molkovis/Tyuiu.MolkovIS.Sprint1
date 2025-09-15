@@ -6,7 +6,7 @@ namespace Tyuiu.MolkovIS.Sprint1.Task4.V27.Lib
     {
         public double Calculate(double x, double y)
         {
-            return(Math.Round(((1+Math.Sin(Math.PI*x))/(x-Math.Sqrt(Math.Abs(y)))),5));
+            return(Math.Round(((1+Math.Sin(Math.PI*x))/(x-Math.Sqrt(Math.Abs(y)))),3));
         }
     }
 }
