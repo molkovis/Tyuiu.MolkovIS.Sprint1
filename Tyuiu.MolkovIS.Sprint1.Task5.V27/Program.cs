@@ -24,6 +24,7 @@ internal class Program
 
         Console.Write("Введите положительное целое число: ");
         int number = Convert.ToInt32(Console.ReadLine());
+
         DataService ds = new DataService();
 
 
